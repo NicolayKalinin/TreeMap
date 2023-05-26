@@ -11,8 +11,10 @@ public class Main {
         persons.add(new Person("Sasha", "Антонова", 31));
         persons.add(new Person("Svetlana", "Мусина-Пушкина", 38));
         persons.add(new Person("Olya", "Воронцова-Вельяминова", 38));
+        persons.add(new Person("Vera", "Воронцова-Вельяминова", 8));
+        persons.add(new Person("Oleg", "Воронцов-Вельяминов", 17));
 
-        Collections.sort(persons, new PersonComparator());
+        persons.removeIf(person -> person.getAge() < 18);
 
         for (Person person : persons) {
             System.out.println (person);
